@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willkommen auf meiner epischen Website!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #000428, #004e92);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: -webkit-linear-gradient(45deg, #ff9a9e, #fad0c4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: auto;
+            opacity: 0.8;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background: #ff416c;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #ff4b2b;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hidden {
+            display: none;
+        }
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            max-width: 600px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        function showMore() {
+            document.getElementById('extraContent').classList.remove('hidden');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Die coolste Website der Welt</h1>
+        <p>Hier findest du epische Inhalte, nützliche Tools und viel Inspiration!</p>
+        <button class="btn" onclick="showMore()">Mehr erfahren</button>
+        <div id="extraContent" class="content hidden">
+            <h2>Geheime Ressourcen</h2>
+            <p>Hier bekommst du Zugriff auf kostenlose Tools, Tipps und spannende Infos!</p>
+            <ul>
+                <li><a href="https://www.w3schools.com" target="_blank">Webentwicklung lernen</a></li>
+                <li><a href="https://www.github.com" target="_blank">Code mit GitHub verwalten</a></li>
+                <li><a href="https://www.freecodecamp.org" target="_blank">Kostenlose Programmierkurse</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
